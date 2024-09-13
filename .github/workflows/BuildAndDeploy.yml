@@ -6,8 +6,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
-      - name: Build the website
-        run: npx @11ty/eleventy
+      - name: Build the site
+        run: |
+          npm run build
       
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
